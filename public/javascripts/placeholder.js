@@ -8,6 +8,19 @@
  */
 module.exports = Wordlist;
 
+angular.module('wordlistApp', [])
+    .controller('WordlistController', ['$scope', function($scope) {
+        $scope.Wordlist = new Wordlist();
+
+        $scope.listSize = function() {
+            Wordlist.listSize();
+        };
+
+        $scope.add = function(thing) {
+            Wordlist.add(thing);
+        };
+    }]);
+
 function Wordlist(){
     this.name = "list";
     this.words = [];
