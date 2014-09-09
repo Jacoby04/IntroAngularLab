@@ -7,15 +7,24 @@
         <title></title>
         <link rel="stylesheet" href="./stylesheets/style.css">
         <script type="text/javascript" src="./libs/angular/angular.min.js" ></script>
-        <script type="text/javascript" src="./wordlist.js" ></script>
+        <script type="text/javascript" src="./placeholder.js" ></script>
     </head>
     <body>
         <h1>Angular</h1>
         <img src="./images/throh.png">
 
+        <h2>Add items here!</h2>
         <div ng-controller="WordlistController">
-            <textarea></textarea>
-
+            <span>The list has {{listSize()}} items.</span>
+            <ul>
+                <li ng-repeat="word in Wordlist">
+                    <span>{{word}}</span>
+                </li>
+            </ul>
+            <form ng-submit="add()">
+                <input type="text" ng-Model="thing" placeholder="add new word here">
+                <input type="submit" value="add">
+            </form>
 
         </div>
     </body>
