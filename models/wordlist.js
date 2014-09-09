@@ -13,6 +13,10 @@ Wordlist.prototype.isEmpty = function () {
     return this.words.length == 0;
 };
 
+Wordlist.prototype.listSize = function () {
+    return this.words.length;
+};
+
 Wordlist.prototype.add = function (thing) {
     this.words.push(thing);
 };

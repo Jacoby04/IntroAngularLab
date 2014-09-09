@@ -14,9 +14,9 @@ function Wordlist(){
     this.includeInCurrent= true;
 }
 
-Wordlist.protoype.listSize = function () {
-    return the.words.length;
-}
+Wordlist.prototype.listSize = function () {
+    return this.words.length;
+};
 
 Wordlist.prototype.isEmpty = function () {
     return this.words.length == 0;

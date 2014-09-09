@@ -13,6 +13,17 @@ describe('Wordlist', function(){
             assert.equal(wordlist.isEmpty(), false);
         });
     });
+    describe('listSize()', function(){
+        it('should return 0 when the list is empty', function(){
+            var wordlist = new Wordlist();
+            assert.equal(wordlist.listSize(), 0);
+        });
+        it('should return 2 when the list has 2 items', function(){
+            var wordlist = new Wordlist();
+            wordlist.words =  ["dog", "cat"];
+            assert.equal(wordlist.listSize(), 2);
+        });
+    });
     describe('add(thing)', function(){
         it('should add the word to the list', function(){
             var wordlist2 = new Wordlist();
